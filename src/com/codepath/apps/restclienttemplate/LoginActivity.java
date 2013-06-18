@@ -17,13 +17,10 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 
 public class LoginActivity extends OAuthLoginActivity<TwitterClient> {
 
-	ArrayList<Tweet> tweetResults = new ArrayList<Tweet>();
-	TweetArrayAdapter tweetAdapter; // TODO init
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		Log.d("DEBUG", "onCreate");
-		tweetAdapter = new TweetArrayAdapter(this,  tweetResults);
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
